@@ -1186,68 +1186,6 @@ footer{padding:24px 60px;border-top:1px solid var(--border);display:flex;justify
 <div id="transition-overlay"></div>
 
 
-<!-- ROBOT NAVIGATOR -->
-<div id="robot-nav" onclick="toggleRadial()" style="padding:8px;display:inline-block;">
-  <div id="robot-body" style="pointer-events:none;">
-    <!-- EVE (dark mode) -->
-    <svg id="svg-eve" class="robot-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- EVE: smooth white egg-shaped body -->
-      <ellipse cx="32" cy="30" rx="22" ry="26" fill="#e8f0ff" stroke="#a0c4ff" stroke-width="1.2"/>
-      <!-- screen/face visor - blue glow -->
-      <ellipse cx="32" cy="28" rx="13" ry="7" fill="#0a1628" stroke="#5ba3f5" stroke-width="1"/>
-      <!-- eyes - two blue glowing dots -->
-      <ellipse cx="26" cy="28" rx="4" ry="4" fill="#5ba3f5" id="robot-eye" opacity="0.95"/>
-      <ellipse cx="38" cy="28" rx="4" ry="4" fill="#5ba3f5" opacity="0.95"/>
-      <circle cx="26" cy="27" r="1.5" fill="white" opacity="0.7"/>
-      <circle cx="38" cy="27" r="1.5" fill="white" opacity="0.7"/>
-      <!-- body lower detail -->
-      <ellipse cx="32" cy="48" rx="10" ry="4" fill="#c8d8f0" opacity="0.5"/>
-      <!-- arm stub left -->
-      <ellipse cx="10" cy="32" rx="5" ry="3" fill="#d0e0ff" stroke="#a0c4ff" stroke-width="1" id="eve-arm-l"/>
-      <!-- arm stub right -->
-      <ellipse cx="54" cy="32" rx="5" ry="3" fill="#d0e0ff" stroke="#a0c4ff" stroke-width="1" id="eve-arm-r"/>
-      <!-- glow shadow -->
-      <ellipse cx="32" cy="63" rx="16" ry="3" fill="#5ba3f5" opacity="0.12" id="robot-shadow"/>
-    </svg>
-    <!-- WALL-E (light mode) -->
-    <svg id="svg-walle" class="robot-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
-      <!-- body box -->
-      <rect x="14" y="28" width="36" height="24" rx="4" fill="#c8a040" stroke="#8b6820" stroke-width="1.5"/>
-      <!-- chest panel -->
-      <rect x="19" y="32" width="12" height="8" rx="2" fill="#5ba3f5" opacity="0.7"/>
-      <rect x="33" y="32" width="12" height="8" rx="2" fill="#e55" opacity="0.6"/>
-      <!-- head box -->
-      <rect x="16" y="10" width="32" height="20" rx="3" fill="#d4aa50" stroke="#8b6820" stroke-width="1.5"/>
-      <!-- eyes - binoculars -->
-      <circle cx="23" cy="20" rx="7" ry="7" fill="#222" stroke="#8b6820" stroke-width="1.5" id="robot-eye"/>
-      <circle cx="41" cy="20" rx="7" ry="7" fill="#222" stroke="#8b6820" stroke-width="1.5"/>
-      <circle cx="23" cy="20" r="4" fill="#5ba3f5" opacity="0.9"/>
-      <circle cx="41" cy="20" r="4" fill="#5ba3f5" opacity="0.9"/>
-      <circle cx="22" cy="19" r="1.5" fill="white" opacity="0.8"/>
-      <circle cx="40" cy="19" r="1.5" fill="white" opacity="0.8"/>
-      <!-- neck -->
-      <rect x="26" y="28" width="12" height="4" rx="2" fill="#b89030"/>
-      <!-- waving arm right -->
-      <g id="walle-arm">
-        <rect x="50" y="34" width="10" height="4" rx="2" fill="#c8a040" stroke="#8b6820" stroke-width="1"/>
-        <circle cx="62" cy="36" r="3" fill="#8b6820"/>
-      </g>
-      <!-- left arm fixed -->
-      <rect x="4" y="34" width="10" height="4" rx="2" fill="#c8a040" stroke="#8b6820" stroke-width="1"/>
-      <!-- tracks -->
-      <rect x="10" y="50" width="44" height="8" rx="4" fill="#555" stroke="#333" stroke-width="1"/>
-      <circle cx="16" cy="54" r="4" fill="#333" stroke="#666" stroke-width="1"/>
-      <circle cx="32" cy="54" r="4" fill="#333" stroke="#666" stroke-width="1"/>
-      <circle cx="48" cy="54" r="4" fill="#333" stroke="#666" stroke-width="1"/>
-      <ellipse cx="32" cy="63" rx="16" ry="3" fill="#8b6820" opacity="0.12" id="robot-shadow"/>
-    </svg>
-  </div>
-</div>
-
-<!-- RADIAL MENU -->
-<div id="radial-menu"></div>
-
-
 <!-- PAGE ARROWS -->
 <button class="page-arrow" id="arrow-left" onclick="navigateDir(-1)" aria-label="Previous">
   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
